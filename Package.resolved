@@ -1,0 +1,33 @@
+{
+  "originHash" : "c179c2a509f200c02c7d7034f963331eaabf5611914a1f19a178d4ae24096ab3",
+  "pins" : [
+    {
+      "identity" : "combinex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/0xfeedface1993/CombineX.git",
+      "state" : {
+        "revision" : "f73eee728a7826a2855fabb380300187f42f5649",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "swift-atomics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-atomics.git",
+      "state" : {
+        "revision" : "cd142fd2f64be2100422d658e7411e39489da985",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "9cb486020ebf03bfa5b5df985387a14a98744537",
+        "version" : "1.6.1"
+      }
+    }
+  ],
+  "version" : 3
+}
