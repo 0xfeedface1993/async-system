@@ -1,10 +1,10 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 //let platforms: [PackageDescription.Platform] = [.linux]
-let platforms: [PackageDescription.Platform] = [.macOS, .linux]
+let platforms: [PackageDescription.Platform] = [.linux]
 let swiftSettings: [SwiftSetting] = [.define("COMBINE_LINUX", .when(platforms: platforms))]
 let cxxSettings: [CXXSetting] = [.define("COMBINE_LINUX", .when(platforms: platforms))]
 

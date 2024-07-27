@@ -3,7 +3,7 @@ import Logging
 
 internal let logger = Logger(label: "com.webshell.anyerase")
 
-#if COMBINE_LINUX && canImport(CombineX)
+#if COMBINE_LINUX && canImport(CombineX) && os(Linux)
 import CombineX
 #else
 import Combine
@@ -54,7 +54,7 @@ extension Publisher {
     }
 }
 
-#if COMBINE_LINUX && canImport(CombineX)
+#if COMBINE_LINUX && canImport(CombineX) && os(Linux)
 extension Publisher {
     /// Bridge to Swift Concurrency
     public var asyncValue: Output {
