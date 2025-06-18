@@ -9,7 +9,7 @@ import CombineX
 import Combine
 #endif
 
-struct CheckedContinuationSlide<T: Publisher> {
+struct CheckedContinuationSlide<T: Publisher> where T.Output: Sendable {
     let publisher: T
     
     init(_ publisher: T) {
@@ -38,7 +38,7 @@ struct CheckedContinuationSlide<T: Publisher> {
     }
 }
 
-extension Publisher {
+extension Publisher where Output: Sendable {
     /// Bridge to Swift Concurrency
     private var leagacyAyncValue: Output {
         get async throws {
@@ -64,7 +64,7 @@ extension Publisher {
     }
 }
 #else
-extension Publisher {
+extension Publisher where Output: Sendable {
     /// Bridge to Swift Concurrency
     @available(macOS 12, iOS 13, *)
     public var asyncValue: Output  {
